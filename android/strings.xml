@@ -699,6 +699,7 @@
   <string name="enable_ai_in_termius_description">使用 AI 将文本转换为终端命令。每月免费提供 1000 次提示，适用于已注册账户的用户。</string>
   <string name="enable_autocomplete_on_each_connect_title">启用自动补全</string>
   <string name="enable_logs_for_these_vaults_in_settings">在设置中为这些保管库启用日志。</string>
+  <string name="enable_logs_for_these_vaults_in_settings_highlight">设置</string>
   <string name="enable_logs_for_this_vault_in_settings">在设置中为该保管库启用日志。</string>
   <string name="enable_nfc">设置</string>
   <string name="enable_sending_analytics_title">发送诊断数据</string>
@@ -1279,7 +1280,6 @@ Termius 不存储加密密码。如果你忘记了密码，你将丢失数据。
   <string name="logout_btn">登出</string>
   <string name="logout_confirmation_description">登出将会从该设备擦除你的Termius数据，任何未同步的数据将会丢失。重新登录以恢复访问。</string>
   <string name="logs_are_disabled_for_selected_vaults">所选保管库的日志已禁用</string>
-  <string name="logs_are_disabled_for_the_selected_vault">所选保管库的日志已禁用</string>
   <string name="logs_storage_oversized_unsynced_logs_promo_description">更改日志保留策略或创建一个账户以在云保管库中存储日志。</string>
   <string name="logs_storage_screen_title">日志存储</string>
   <string name="long_press_additional_keyboard">长按打开自定义面板</string>
@@ -1542,6 +1542,52 @@ echo '$1' &gt;&gt; ~/.ssh/authorized_keys</string>
   <string name="needed_tools_survey_hardware_section">硬件</string>
   <string name="needed_tools_survey_security_section">安全</string>
   <string name="needed_tools_survey_tunnelling_section">隧道</string>
+  <string name="nes_chain_host_picker_empty_title">没有可用主机</string>
+  <string name="nes_chain_host_picker_empty_title_subtitle">请先创建主机，然后设置主机链。</string>
+  <string name="nes_connections_empty_add_host">添加主机</string>
+  <string name="nes_connections_empty_connect_local">本地连接</string>
+  <string name="nes_connections_empty_discover_local_devices">查找本地设备</string>
+  <string name="nes_connections_empty_message">可通过 SSH 连接、扫描本地网络设备或使用串行线缆直接连接设备。</string>
+  <string name="nes_connections_empty_start_serial_connect">开始串行连接</string>
+  <string name="nes_connections_empty_title">连接方式</string>
+  <string name="nes_default_host_picker_empty_title">没有可用主机</string>
+  <string name="nes_default_tag_select_empty_subtitle">标签可帮助你更便捷地筛选主机。</string>
+  <string name="nes_default_tag_select_empty_title">添加标签</string>
+  <string name="nes_group_picker_empty_subtitle">通过为整个组设置通用参数来管理组内主机。</string>
+  <string name="nes_group_picker_empty_title">添加组</string>
+  <string name="nes_hosts_empty_message">将连接信息保存为主机，即可一键连接。</string>
+  <string name="nes_hosts_empty_placeholder">输入 IP 地址或主机名</string>
+  <string name="nes_hosts_empty_title">创建主机</string>
+  <string name="nes_hosts_in_group_empty_message">通过为整个组设置通用参数来管理组内主机。</string>
+  <string name="nes_hosts_in_group_empty_title">向本组添加主机</string>
+  <string name="nes_hosts_in_group_viewer_empty_message">请联系存储库编辑者获取访问权限或创建主机。</string>
+  <string name="nes_hosts_in_group_viewer_empty_title">无添加主机权限</string>
+  <string name="nes_keychain_empty_message">存储凭证信息，快速安全访问你的服务器。</string>
+  <string name="nes_keychain_empty_title">添加凭证</string>
+  <string name="nes_known_hosts_empty_message">已知主机是已受信的服务器身份标识，保存后用于确保后续连接安全。</string>
+  <string name="nes_known_hosts_empty_title">已知主机将显示在此处</string>
+  <string name="nes_no_results_default_empty_message">无搜索结果，请尝试新搜索词。</string>
+  <string name="nes_no_results_default_empty_title">无结果</string>
+  <string name="nes_nsd_search_no_devices_found">未找到任何设备</string>
+  <string name="nes_nsd_search_searching">正在扫描本地网络设备…</string>
+  <string name="nes_port_forwarding_empty_message">配置端口转发以访问数据库、Web 应用等服务。</string>
+  <string name="nes_port_forwarding_empty_title">设置端口转发</string>
+  <string name="nes_port_forwarding_host_picker_empty_title">没有可用主机</string>
+  <string name="nes_port_forwarding_host_picker_empty_title_subtitle">请先创建主机，然后设置端口转发。</string>
+  <string name="nes_select_identity_empty_message">将身份凭证关联至主机或主机组，可统一更新相同凭证。</string>
+  <string name="nes_select_identity_empty_title">添加身份凭证</string>
+  <string name="nes_select_snippet_empty_message">保存常用命令为代码片段，一键复用。</string>
+  <string name="nes_select_snippet_empty_title">创建代码片段</string>
+  <string name="nes_snippet_default_host_picker_empty_title">没有可用主机</string>
+  <string name="nes_snippet_default_host_picker_empty_title_subtitle">请先创建主机，然后设置代码片段的默认主机。</string>
+  <string name="nes_snippets_empty_message">保存常用命令为代码片段，一键复用。</string>
+  <string name="nes_snippets_empty_title">创建代码片段</string>
+  <string name="nes_snippets_in_package_empty_message">将相关命令代码片段分组到包中，便于查找和管理。</string>
+  <string name="nes_snippets_in_package_empty_title">向本包添加代码片段</string>
+  <string name="nes_snippets_in_package_viewer_empty_message">请联系存储库编辑者获取访问权限或创建代码片段。</string>
+  <string name="nes_snippets_in_package_viewer_empty_title">无添加代码片段权限</string>
+  <string name="nes_ssh_key_export_host_picker_empty_title">没有可用主机</string>
+  <string name="nes_ssh_key_export_host_picker_empty_title_subtitle">请先创建主机，然后导出 SSH 密钥。</string>
   <string name="network_is_unreachable">无法访问网络</string>
   <string name="new_connection">新建连接</string>
   <string name="new_crypto_already_migrated_message">看起来新加密功能已在你的账户启用！ &#127881;
@@ -1691,7 +1737,6 @@ echo '$1' &gt;&gt; ~/.ssh/authorized_keys</string>
   <string name="onboarding_serial_connect_description">Termius 支持串行连接。需使用连接 Android 设备与终端设备的线缆</string>
   <string name="onboarding_serial_connect_title">串行连接是专业版功能</string>
   <string name="onboarding_snippets_description">升级至专业版，实现连接启动时自动运行代码片段！</string>
-  <string name="onboarding_snippets_multi_exec_description">升级至专业版，一键在多个主机运行代码片段</string>
   <string name="onboarding_snippets_title">代码片段</string>
   <string name="one_day_before_expiry">1 天后过期</string>
   <string name="one_hour_before_expiry">1 小时后过期</string>
@@ -1841,8 +1886,6 @@ echo '$1' &gt;&gt; ~/.ssh/authorized_keys</string>
   <string name="project_id">termius-dev-49478</string>
   <string name="promo_sftp_description">体验内置 SFTP 客户端，支持 AWS S3</string>
   <string name="promo_sftp_title">SFTP</string>
-  <string name="promo_snippets_description">同时在多个目标执行命令</string>
-  <string name="promo_snippets_title">代码片段</string>
   <string name="promo_tabs_description">体验标签页、快速连接和自动补全</string>
   <string name="promo_tabs_title">增强型终端</string>
   <string name="prompt">提示符</string>
@@ -1951,6 +1994,7 @@ echo '$1' &gt;&gt; ~/.ssh/authorized_keys</string>
   <string name="reset_encryption_password_title">重置加密密码</string>
   <string name="restoreSubs">恢复</string>
   <string name="restore_previous_selection_count_host">恢复之前的选择 (%1$d 主机)</string>
+  <string name="restore_selection">恢复选择</string>
   <string name="restore_subscription">恢复订阅</string>
   <string name="restore_subscription_title">恢复订阅</string>
   <string name="restoring_your_purchase">正在恢复你的购买...</string>
@@ -2025,6 +2069,7 @@ echo '$3' &gt;&gt; "$1/$2";</string>
   <string name="search_known_hosts_items_placeholder">搜索已知主机</string>
   <string name="search_menu_title">搜索</string>
   <string name="search_no_results_found">未找到结果</string>
+  <string name="search_no_results_found_subtitle">调整搜索并重试。</string>
   <string name="search_pf_rules_items_placeholder">搜索端口转发规则</string>
   <string name="search_snippets_items_placeholder">搜索代码片段和包</string>
   <string name="searchbar_scrolling_view_behavior">com.google.android.material.search.SearchBar$ScrollingViewBehavior</string>
@@ -2045,7 +2090,6 @@ echo '$3' &gt;&gt; "$1/$2";</string>
   <string name="secure_vault_third_argument_title">离线优先</string>
   <string name="security_cloud_and_subscription">安全、云服务与订阅</string>
   <string name="select_all">全选</string>
-  <string name="select_bonjour">选择 Bonjour 主机</string>
   <string name="select_charset">选择字符集</string>
   <string name="select_data_to_move">选择要移动的数据</string>
   <string name="select_file">从 SD 卡选择文件</string>
@@ -2083,8 +2127,7 @@ echo '$3' &gt;&gt; "$1/$2";</string>
   <string name="session_log_connection_status_failed">失败</string>
   <string name="session_log_connection_status_unknown">未知</string>
   <string name="session_logs_contact_us_url">https://termius.typeform.com/to/E9XVyoIb#email=%s</string>
-  <string name="session_logs_empty_screen_common_description">请先连接主机
-    结束会话时将保存日志</string>
+  <string name="session_logs_empty_screen_common_description">连接日志是终端会话期间活动的记录。</string>
   <string name="session_logs_table_column_action">操作</string>
   <string name="session_logs_table_column_device">设备</string>
   <string name="session_logs_table_column_host">主机</string>
@@ -2469,6 +2512,7 @@ echo '$3' &gt;&gt; "$1/$2";</string>
   <string name="subscription_not_restored">恢复订阅时出错，请联系支持团队</string>
   <string name="subscription_not_restored_title">订阅恢复失败</string>
   <string name="subscription_purchased_already">你的 Google 账户已有订阅，请执行恢复操作</string>
+  <string name="subscription_restoration_is_unavailable">订阅恢复不可用。</string>
   <string name="subscription_restored_message">订阅已恢复</string>
   <string name="subscription_time_left">剩余 %d %s 于 %s</string>
   <string name="successfully_completed_credentials_mode">设置完成！</string>
@@ -2618,8 +2662,6 @@ echo '$3' &gt;&gt; "$1/$2";</string>
   <string name="termius_premium_features_header_expired">专业版功能已禁用</string>
   <string name="termius_premium_features_jump_host_subtitle">多跳 SSH 隧道</string>
   <string name="termius_premium_features_jump_host_title">主机级联</string>
-  <string name="termius_premium_features_multi_exec_snippets_subtitle">批量在多个主机运行代码片段，提升效率</string>
-  <string name="termius_premium_features_multi_exec_snippets_title">代码片段批量执行</string>
   <string name="termius_premium_features_proxy_subtitle">通过 HTTP 或 SOCKS5 代理访问 SSH/SFTP</string>
   <string name="termius_premium_features_proxy_title">代理连接 SSH</string>
   <string name="termius_premium_features_serial_subtitle">直接连接设备</string>
@@ -2740,7 +2782,6 @@ echo '$3' &gt;&gt; "$1/$2";</string>
   <string name="unknown_request_error">请求处理出错，请重试</string>
   <string name="unknown_section_header">未知</string>
   <string name="unlock_button_text">解锁</string>
-  <string name="unlock_description">SFTP、代码片段、代理转发</string>
   <string name="unlock_title">解锁专业版功能</string>
   <string name="unlock_unlimited_access">解锁无限访问权限</string>
   <string name="unlock_with_master_password">使用加密密码解锁</string>
