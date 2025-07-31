@@ -1324,3 +1324,4 @@ Location[|位置[
 "Processing your extension request..."|"正在处理你的延期请求..."
 "Your trial has been successfully extended by 7 days!"|"你的试用期已成功延长7天！"
 "You have regained full Termius access until"|"你已恢复Termius的完全访问权限，直到"
+"Upgrade"|"升级套餐"
