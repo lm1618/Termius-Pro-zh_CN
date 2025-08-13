@@ -62,7 +62,7 @@ def create_or_recreate_dir(dir_path):
 
 def create_tmp_dir(working_dir):
     tmp_dir = os.path.abspath(os.path.join(working_dir, DIR_TMP))
-    create_or_recreate_dir(tmp_dir)
+    # create_or_recreate_dir(tmp_dir)
     return tmp_dir
 
 
