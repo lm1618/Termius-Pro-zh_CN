@@ -445,7 +445,7 @@ def apk_file_modify(file_dir, sign_properties):
     apk_editor_jar = os.path.join(file_dir, APK_EDITOR_FILENAME)
 
     logger.info("Starting APK file processing")
-    apkm_to_apk(apk_editor_jar, apkm_file, apk_file)
+    # apkm_to_apk(apk_editor_jar, apkm_file, apk_file)
 
     logger.info("Decompiling APK file")
     # decode_apk(apk_editor_jar, apk_file, decompile_dir)
