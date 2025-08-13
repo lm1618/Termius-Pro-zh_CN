@@ -15,7 +15,7 @@ from tqdm import tqdm
 # ------------------------------ Parameters Configuration ------------------------------
 APP_FILE = "Termius"
 DIR_TMP = ".tmp_dir"
-EXT_APKM = ".apk"
+EXT_APKM = ".apkm"
 EXT_APK = ".apk"
 APKM_FILENAME = f"{APP_FILE}{EXT_APKM}"
 APK_EDITOR_FILENAME = "APKEditor.jar"
