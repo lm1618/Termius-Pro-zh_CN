@@ -15,7 +15,7 @@ from tqdm import tqdm
 # ------------------------------ Parameters Configuration ------------------------------
 APP_FILE = "Termius"
 DIR_TMP = ".tmp_dir"
-EXT_APKM = ".apkm"
+EXT_APKM = ".apk"
 EXT_APK = ".apk"
 APKM_FILENAME = f"{APP_FILE}{EXT_APKM}"
 APK_EDITOR_FILENAME = "APKEditor.jar"
@@ -438,8 +438,9 @@ def apk_file_modify(file_dir, sign_properties):
     """Modify APK file"""
     tmp_dir = create_tmp_dir(file_dir)
     decompile_dir = os.path.join(tmp_dir, APP_FILE)
-    apkm_file = os.path.join(file_dir, APP_FILE + EXT_APKM)
-    apk_file = os.path.join(tmp_dir, APP_FILE + EXT_APK)
+    # apkm_file = os.path.join(file_dir, APP_FILE + EXT_APKM)
+    # apk_file = os.path.join(tmp_dir, APP_FILE + EXT_APK)
+    original_apk_file = os.path.join(file_dir, "Termius.apk") # 确保你的APK文件叫这个
     filename_zh = APP_FILE + ZH_SUFFIX
     apk_editor_jar = os.path.join(file_dir, APK_EDITOR_FILENAME)
 
@@ -447,7 +448,8 @@ def apk_file_modify(file_dir, sign_properties):
     apkm_to_apk(apk_editor_jar, apkm_file, apk_file)
 
     logger.info("Decompiling APK file")
-    decode_apk(apk_editor_jar, apk_file, decompile_dir)
+    # decode_apk(apk_editor_jar, apk_file, decompile_dir)
+    decode_apk(apk_editor_jar, original_apk_file, decompile_dir) # 修改为新的文件名
 
     logger.info("Replacing language resources")
     replace_language_xml(file_dir, decompile_dir)
