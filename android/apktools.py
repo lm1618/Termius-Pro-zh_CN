@@ -62,7 +62,7 @@ def create_or_recreate_dir(dir_path):
 
 def create_tmp_dir(working_dir):
     tmp_dir = os.path.abspath(os.path.join(working_dir, DIR_TMP))
-    # create_or_recreate_dir(tmp_dir)
+    create_or_recreate_dir(tmp_dir)
     return tmp_dir
 
 
@@ -270,39 +270,39 @@ def download_apk_editor_jar(file_dir, filename):
         logger.error(f"Error downloading {filename}: {str(e)}")
 
 
-# def download_termius_apk(file_dir, filename):
-    # """Download Termius.apk"""
-    # file_path = os.path.join(file_dir, filename)
-    # if os.path.exists(file_path):
-        # logger.info(f"{filename} already exists, skipping download.")
-        # return
-    # try:
-        # logger.info(f"{filename} does not exist, starting download...")
-        # logger.info(f"Fetching version number for {filename}...")
-        # main_page_soup = fetch_page(BASE_APK_URL, HEADERS)
-        # if not main_page_soup:
-            # raise Exception("Failed to access the main page, terminating the program.")
-        # latest_version = extract_version_from_title(main_page_soup)
-        # if not latest_version:
-            # raise Exception("Failed to extract version number, terminating the program.")
-        # logger.info(f"Detected latest version: {latest_version}")
-        # version_replace = latest_version.replace('.', '-')
-        # version_slug = f"termius-modern-ssh-client-{version_replace}"
-        # _, apk_download_page_url = build_apkmirror_download_chain(BASE_APK_URL, version_slug, HEADERS)
-        # if not apk_download_page_url:
-            # raise Exception("Failed to construct a valid download link, terminating the program.")
-        # with requests.Session() as session:
-            # session.headers.update(HEADERS)
-            # direct_download_url = get_final_download_url(session, apk_download_page_url)
-            # if not direct_download_url:
-                # raise Exception("Failed to obtain the final download link, terminating the program.")
-            # logger.info(f"Final download link obtained: {direct_download_url}")
-            # logger.info(f"Starting download of {filename}...")
-            # if not download_file(session, direct_download_url, file_path):
-                # raise Exception(f"{filename} download failed.")
-            # logger.info(f"{filename} download completed.")
-    # except Exception as e:
-        # logger.error(f"Error occurred while downloading {filename}: {str(e)}")
+def download_termius_apk(file_dir, filename):
+    """Download Termius.apk"""
+    file_path = os.path.join(file_dir, filename)
+    if os.path.exists(file_path):
+        logger.info(f"{filename} already exists, skipping download.")
+        return
+    try:
+        logger.info(f"{filename} does not exist, starting download...")
+        logger.info(f"Fetching version number for {filename}...")
+        main_page_soup = fetch_page(BASE_APK_URL, HEADERS)
+        if not main_page_soup:
+            raise Exception("Failed to access the main page, terminating the program.")
+        latest_version = extract_version_from_title(main_page_soup)
+        if not latest_version:
+            raise Exception("Failed to extract version number, terminating the program.")
+        logger.info(f"Detected latest version: {latest_version}")
+        version_replace = latest_version.replace('.', '-')
+        version_slug = f"termius-modern-ssh-client-{version_replace}"
+        _, apk_download_page_url = build_apkmirror_download_chain(BASE_APK_URL, version_slug, HEADERS)
+        if not apk_download_page_url:
+            raise Exception("Failed to construct a valid download link, terminating the program.")
+        with requests.Session() as session:
+            session.headers.update(HEADERS)
+            direct_download_url = get_final_download_url(session, apk_download_page_url)
+            if not direct_download_url:
+                raise Exception("Failed to obtain the final download link, terminating the program.")
+            logger.info(f"Final download link obtained: {direct_download_url}")
+            logger.info(f"Starting download of {filename}...")
+            if not download_file(session, direct_download_url, file_path):
+                raise Exception(f"{filename} download failed.")
+            logger.info(f"{filename} download completed.")
+    except Exception as e:
+        logger.error(f"Error occurred while downloading {filename}: {str(e)}")
 
 
 def load_sign_properties(file_dir):
@@ -444,7 +444,7 @@ def apk_file_modify(file_dir, sign_properties):
     apk_editor_jar = os.path.join(file_dir, APK_EDITOR_FILENAME)
 
     logger.info("Starting APK file processing")
-    # apkm_to_apk(apk_editor_jar, apkm_file, apk_file)
+    apkm_to_apk(apk_editor_jar, apkm_file, apk_file)
 
     logger.info("Decompiling APK file")
     decode_apk(apk_editor_jar, apk_file, decompile_dir)
@@ -472,9 +472,9 @@ def file_exists(file_dir, sign_properties):
     language_xml = os.path.join(file_dir, LANGUAGE_XML)
     if not os.path.exists(language_xml):
         raise Exception("Language file not found.")
-    # termius_apk = os.path.join(file_dir, APKM_FILENAME)
-    # if not os.path.exists(termius_apk):
-        # download_termius_apk(file_dir, APKM_FILENAME)
+    termius_apk = os.path.join(file_dir, APKM_FILENAME)
+    if not os.path.exists(termius_apk):
+        download_termius_apk(file_dir, APKM_FILENAME)
     apk_editor_jar = os.path.join(file_dir, APK_EDITOR_FILENAME)
     if not os.path.exists(apk_editor_jar):
         download_apk_editor_jar(file_dir, APK_EDITOR_FILENAME)
